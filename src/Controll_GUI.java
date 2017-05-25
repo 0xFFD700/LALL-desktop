@@ -26,6 +26,7 @@ public class Controll_GUI extends JFrame {
 
         brightnessSLider = new Custom_JSliders(100, 1, "Brightness");
         add(brightnessSLider);
+
     }
 
 
@@ -42,5 +43,7 @@ public class Controll_GUI extends JFrame {
 
     public static void main(String[] args) {
         new Controll_GUI().pack();
+        new Portchooser_GUI().pack();
+
     }
 }
