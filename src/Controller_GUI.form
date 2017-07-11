@@ -14,47 +14,43 @@
           <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
           <gridbag weightx="1.0" weighty="1.0"/>
         </constraints>
-        <properties/>
+        <properties>
+          <minimum value="0"/>
+        </properties>
       </component>
       <component id="610a" class="javax.swing.JSlider" binding="rSlider">
         <constraints>
           <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
           <gridbag weightx="1.0" weighty="1.0"/>
         </constraints>
-        <properties/>
+        <properties>
+          <maximum value="255"/>
+          <minimum value="1"/>
+          <value value="127"/>
+        </properties>
       </component>
       <component id="e520e" class="javax.swing.JSlider" binding="gSlider">
         <constraints>
           <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
           <gridbag weightx="1.0" weighty="1.0"/>
         </constraints>
-        <properties/>
+        <properties>
+          <maximum value="255"/>
+          <minimum value="1"/>
+          <value value="127"/>
+        </properties>
       </component>
       <component id="28a82" class="javax.swing.JSlider" binding="bSlider">
         <constraints>
           <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
           <gridbag weightx="1.0" weighty="1.0"/>
         </constraints>
-        <properties/>
-      </component>
-      <component id="96462" class="javax.swing.JButton" binding="actionButton">
-        <constraints>
-          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="1.0" weighty="1.0"/>
-        </constraints>
         <properties>
-          <text value="Change"/>
+          <maximum value="255"/>
+          <minimum value="1"/>
+          <value value="127"/>
         </properties>
       </component>
-      <grid id="9aad9" binding="colorPanel" layout-manager="GridBagLayout">
-        <constraints>
-          <grid row="1" column="2" row-span="3" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-          <gridbag weightx="1.0" weighty="1.0"/>
-        </constraints>
-        <properties/>
-        <border type="none"/>
-        <children/>
-      </grid>
       <component id="823f0" class="javax.swing.JLabel" binding="rLabel">
         <constraints>
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
