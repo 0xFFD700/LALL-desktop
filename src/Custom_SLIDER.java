@@ -18,29 +18,38 @@ class Custom_SLIDER implements ChangeListener {
     public void stateChanged(ChangeEvent changeEvent) {
         //changing background color
         Controller_GUI con = Controller.getCl();
-        con.getMainPanel().setBackground(new Color(con.getrSlider(), con.getgSlider(), con.getbSlider()));
+        Color backColor = new Color(con.getrSliderV(), con.getgSliderV(), con.getbSliderV());
+        con.getMainPanel().setBackground(backColor);
+        con.getBrightnessSlider().setBackground(backColor);
+        con.getrSlider().setBackground(backColor);
+        con.getgSlider().setBackground(backColor);
+        con.getbSlider().setBackground(backColor);
 
         //get value and create isostream
         JSlider source = (JSlider) changeEvent.getSource();
         if (!source.getValueIsAdjusting())
-            //Controll_GUI.getAllValues();
             try {
-                //new BlueCove_SP().go(mode, getValue());
+                switch (source.getName()) {
+                    case "R":
+                        Controller.getBlue().go('r', source.getValue());
+                        break;
+                    case "G":
+                        Controller.getBlue().go('g', source.getValue());
+                        break;
+                    case "B":
+                        Controller.getBlue().go('b', source.getValue());
+                        break;
+                    case "H":
+                        Controller.getBlue().go('h', source.getValue());
+                        break;
+                }
+                //
             } catch (Exception ex) {
                 Logger.getLogger(BlueCove_SP.class.getName()).log(Level.SEVERE, null, ex);
             }
 
         {
-            switch (source.getName()) {
-                case "R":
-                    break;
-                case "G":
-                    break;
-                case "B":
-                    break;
-                case "H":
-                    break;
-            }
+
         }
     }
 }

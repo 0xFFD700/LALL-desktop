@@ -5,9 +5,14 @@ import javax.swing.*;
  */
 public class Controller {
     static Controller_GUI cl = new Controller_GUI();
+    static BlueCove_SP blue = new BlueCove_SP();
 
-    public static Controller_GUI getCl() {
+    static Controller_GUI getCl() {
         return cl;
+    }
+
+    static BlueCove_SP getBlue() {
+        return blue;
     }
 
     public static void main(String[] args) {

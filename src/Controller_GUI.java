@@ -24,19 +24,33 @@ public class Controller_GUI extends JFrame {
         return mainPanel;
     }
 
-    int getBrightnessSlider() {
-        return brightnessSlider.getValue();
-    }
-
-    int getrSlider() {
+    //Slider values
+    int getrSliderV() {
         return rSlider.getValue();
     }
 
-    int getgSlider() {
+    int getgSliderV() {
         return gSlider.getValue();
     }
 
-    int getbSlider() {
+    int getbSliderV() {
         return bSlider.getValue();
+    }
+
+    //Slider objects
+    JSlider getBrightnessSlider() {
+        return brightnessSlider;
+    }
+
+    JSlider getrSlider() {
+        return rSlider;
+    }
+
+    JSlider getgSlider() {
+        return gSlider;
+    }
+
+    JSlider getbSlider() {
+        return bSlider;
     }
 }
