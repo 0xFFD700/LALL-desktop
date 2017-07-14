@@ -8,17 +8,18 @@ import javax.microedition.io.StreamConnection;
  */
 class BlueCove_SP {
 
-    void go(char slider, int value) throws Exception {
+    void go(int slider, int value) throws Exception {
         System.out.println("Slider " + slider + " value " + value);
         StreamConnection streamConnection = (StreamConnection)
                 Connector.open("btspp://98D331709E69:1;authenticate=false;encrypt=false;master=false");
         OutputStream os = streamConnection.openOutputStream();
         InputStream is = streamConnection.openInputStream();
+
         os.write(slider);
-        if (is.read() == '1') {
+        if (is.read() == 1) {
             os.write(value);
             os.close();
-            System.out.println("in");
+
         }
         is.close();
         streamConnection.close();

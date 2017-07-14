@@ -31,16 +31,16 @@ class Custom_SLIDER implements ChangeListener {
             try {
                 switch (source.getName()) {
                     case "R":
-                        Controller.getBlue().go('r', source.getValue());
+                        Controller.getBlue().go(1, source.getValue());
                         break;
                     case "G":
-                        Controller.getBlue().go('g', source.getValue());
+                        Controller.getBlue().go(2, source.getValue());
                         break;
                     case "B":
-                        Controller.getBlue().go('b', source.getValue());
+                        Controller.getBlue().go(3, source.getValue());
                         break;
                     case "H":
-                        Controller.getBlue().go('h', source.getValue());
+                        Controller.getBlue().go(4, source.getValue());
                         break;
                 }
                 //
