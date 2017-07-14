@@ -13,32 +13,45 @@ void setup() {
   BT.println("Connected");
 }
 
+//RGB colors
 int R = 127, G = 127, B = 127;
 
+//read slider
 void loop() {
-     if (BT.available() > 0) {
+  if (BT.available() > 0) {
     whichSlider(BT.read());
   } 
 }
 
+//give feedback and set new RGB colors
 void whichSlider (int slider) {
+  BT.write(1); 
+  BT.flush(); 
+  while(!BT.available()) {
+  }
   switch (slider) {
-  case 1: BT.write(1); BT.flush(); while(!BT.available()) {}  R = BT.read();
+  case 1: 
+    R = BT.read();
     break;
-  case 2: BT.write(1); BT.flush(); while(!BT.available()) {}  G = BT.read();
+  case 2: 
+    G = BT.read();
     break;
-  case 3: BT.write(1); BT.flush(); while(!BT.available()) {}  B = BT.read(); 
+  case 3: 
+    B = BT.read(); 
     break;
-  case 4: BT.write(1); BT.flush(); while(!BT.available()) {} strip.setBrightness(BT.read());
+  case 4: 
+    strip.setBrightness(BT.read());
     break;
   }
-   setColor();
+  setColor();
 }
 
+//set strip to new values
 void setColor() {
   for (int j = 0; j <= 60; j++) {
     strip.setPixelColor(j, R, G, B);
   }
   strip.show();
 }
+
 
