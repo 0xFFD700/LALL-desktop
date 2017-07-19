@@ -1,12 +1,13 @@
 import javax.swing.*;
-import java.io.IOException;
 
 /**
  * Created by xfdd700 on 08.07.17.
+ * LALL-desktop
+ * https://github.com/0xFFD700
  */
 public class Controller {
-    static Controller_GUI cl = new Controller_GUI();
-    static BlueCove_SP blue = new BlueCove_SP();
+    private static Controller_GUI cl = new Controller_GUI();
+    private static BlueCove_SP blue = new BlueCove_SP();
 
     static Controller_GUI getCl() {
         return cl;

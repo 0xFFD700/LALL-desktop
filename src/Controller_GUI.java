@@ -2,6 +2,7 @@ import javax.swing.*;
 
 /**
  * Created by jenny on 12.06.17.
+ * LALL-desktop
  * https://github.com/0xFFD700
  */
 public class Controller_GUI extends JFrame {
